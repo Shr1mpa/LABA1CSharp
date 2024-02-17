@@ -1,12 +1,5 @@
 ﻿using LABA1.Classes;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace LABA1
@@ -17,7 +10,7 @@ namespace LABA1
         {
             InitializeComponent();
         }
-        StudentRepository studentRepository = new StudentRepository();
+        FileManager _fileManager = new FileManager();
         private void Form1_Load(object sender, EventArgs e)
         {
             
@@ -38,23 +31,27 @@ namespace LABA1
                 day = int.Parse(textBox3.Text);
                 month = int.Parse(textBox4.Text);
                 year = int.Parse(textBox5.Text);
-                Student student = new Student(firstName, lastName, day, month, year);
-                studentRepository.save(student, "D:\\C#Labs\\LABA1\\LABA1\\StudentsList.txt");
+                StudentVm student = new StudentVm(firstName, lastName, day, month, year);
+                _fileManager.Save(student);
+                textBox1.Clear();
+                textBox2.Clear();
+                textBox3.Clear();
+                textBox4.Clear();
+                textBox5.Clear();
+                MessageBox.Show("Student added");
             }
             catch (FormatException ex)
             {
                 MessageBox.Show("Error: " + ex.Message);
                 return;
             }
-            
-
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             ListForm form2 = new ListForm();
-            form2.Show();
-            this.Hide(); 
+            form2.ShowDialog();
+             
         }
     }
 }

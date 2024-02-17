@@ -1,0 +1,47 @@
+[
+  {
+    "Birthday": {
+      "Day": 14,
+      "Month": 5,
+      "Year": 2004
+    },
+    "FirstName": "student",
+    "LastName": "student1"
+  },
+  {
+    "Birthday": {
+      "Day": 22,
+      "Month": 5,
+      "Year": 2005
+    },
+    "FirstName": "Amina",
+    "LastName": "Syniuk"
+  },
+  {
+    "Birthday": {
+      "Day": 30,
+      "Month": 6,
+      "Year": 2003
+    },
+    "FirstName": "Student2",
+    "LastName": "newStudent"
+  },
+  {
+    "Birthday": {
+      "Day": 25,
+      "Month": 6,
+      "Year": 2005
+    },
+    "FirstName": "Student",
+    "LastName": "student5"
+  },
+  {
+    "Birthday": {
+      "Day": 5,
+      "Month": 6,
+      "Year": 2008
+    },
+    "FirstName": "newStudent",
+    "LastName": "student"
+  }
+]
